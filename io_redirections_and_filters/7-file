@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Best School" > \*\\\x27\"Best School\"\x27\\\*\$\?\*\*\*\*\*:)
+echo "Best School" > \*\\\''"Best School"\'\\*\$\?\*\*\*\*\*:)
