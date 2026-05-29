@@ -1,1 +1,3 @@
-whoami
+#!/bin/bash
+echo "su betty"
+why?
