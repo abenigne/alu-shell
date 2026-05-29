@@ -1,0 +1,2 @@
+#!/bin/bash
+nl | grep "^\s*[13579][[:space:]]" | cut -f2
