@@ -1,1 +1,4 @@
-su betty
+#!/bin/bash
+echo "su betty"
+echo "why?"
+
