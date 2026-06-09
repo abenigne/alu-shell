@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+for (i -eq:-le 10) {
+do
+echo "Best School"
+done
+}
+
