@@ -1,6 +1,3 @@
 # alu-shell
 
-## processes_and_signals
-
-Bash scripts covering PIDs, processes, and signals on Ubuntu 20.04 LTS.
-
+Shell scripting projects from the ALU Software Engineering program — covering Bash basics, processes, and signals.
