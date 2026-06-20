@@ -1,7 +1,35 @@
 #!/usr/bin/env bash
-# Indefinitely writes "I am alive!" to /tmp/my_process every 2 seconds
-while true; do
-    echo "I am alive!" >> /tmp/my_process
-    sleep 2
-done
+# Manages the manage_my_process daemon: start, stop, or restart it
 
+PID_FILE="/var/run/my_process.pid"
+SCRIPT_DIR="$(dirname "$0")"
+DAEMON="$SCRIPT_DIR/manage_my_process"
+
+start() {
+"$DAEMON" &
+echo "$!" > "$PID_FILE"
+}
+
+stop() {
+kill "$(cat "$PID_FILE")"
+rm -f "$PID_FILE"
+}
+
+case "$1" in
+start)
+start
+echo "manage_my_process started"
+;;
+stop)
+stop
+echo "manage_my_process stopped"
+;;
+restart)
+stop
+start
+echo "manage_my_process restarted"
+;;
+*)
+echo "Usage: manage_my_process {start|stop|restart}"
+;;
+esac
